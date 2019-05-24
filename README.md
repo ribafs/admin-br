@@ -76,6 +76,7 @@ sh adminbr.sh /var/www/html/clientes
 ou
 adminbr.bat c:\xampp\htdocs\clientes
 ```
+Com isso ele copia os dois arquivos (bootstrap_cli.php e AppController.php) e efetua os migrations.
 
 ## Geração do Código com o bake
 ```php
