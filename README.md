@@ -42,13 +42,13 @@ cd clientes
 chmod +x bin/cake
 ```
 ## Instalação do Plugin
-
+```php
 composer require ribafs/admin-br
-
+```
 ## Habilitar o Plugin
-
+```php
 bin/cake plugin load AdminBr --bootstrap
-
+```
 ## Configurações
 
 Banco de dados – config/app.pgp, configure user, senha e banco:
