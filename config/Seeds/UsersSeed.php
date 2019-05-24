@@ -30,27 +30,26 @@ class UsersSeed extends AbstractSeed
             [
                 'id' => '2',
                 'username' => 'admin',
-                'password' => '$2y$10$XPWeblQCdPrXIbQzMaBCw.DOHFalF62TH
-Z8XbwzA3qUgFVZhbZteC',
+                'password' => '$2y$10$TGZG6d.9XCIh.y0qAuvNlupylnG7CR8fP7OvD1tGesNmbXdPLhyYi',
                 'group_id' => '2',
                 'created' => '2016-09-15 15:57:28',
-                'modified' => '2019-04-06 09:54:01',
+                'modified' => '2019-05-24 20:33:02',
             ],
             [
                 'id' => '3',
                 'username' => 'manager',
-                'password' => '$2y$10$CuHXN/I.fsDjwDD4eW.bie2P3F4Kvy3Uof18diZwrsshUrK8dmqx2',
+                'password' => '$2y$10$fx0/o/XU3WPO5.nnP7cnCeSuFsFjxCMkk72DciLqABzHp50cOFnre',
                 'group_id' => '3',
                 'created' => '2016-09-15 15:57:39',
-                'modified' => '2019-04-06 09:54:15',
+                'modified' => '2019-05-24 20:33:15',
             ],
             [
                 'id' => '4',
                 'username' => 'user',
-                'password' => '$2y$10$Dp.70puQvgpsdkIxraND0.vuL8TNRIYLncGQEg6NoCdPJGy0fdXgW',
+                'password' => '$2y$10$BFj76H6cjH7D7pDxFFtEmu57HlJfKGPfmUEnl5zeRwxVtCMRCyxNG',
                 'group_id' => '4',
                 'created' => '2016-09-15 15:58:21',
-                'modified' => '2019-04-06 09:54:28',
+                'modified' => '2019-05-24 20:33:31',
             ],
         ];
 
