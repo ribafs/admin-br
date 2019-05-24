@@ -39,7 +39,6 @@ Chamarei o aplicativo de clientes
 cd /var/www/html
 composer create-project --prefer-dist cakephp/app clientes
 cd clientes
-chmod +x bin/cake
 ```
 ## Instalação do Plugin
 ```php
