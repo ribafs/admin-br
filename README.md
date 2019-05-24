@@ -71,10 +71,11 @@ Rotas – config/routes.php, configure para Users/login:
 https://github.com/ribafs/admin-br
 
 Descompacte, acesse o diretório e execute o script adminbr.sh ou adminbr.bat
-
+```php
 sh adminbr.sh /var/www/html/clientes
 ou
 adminbr.bat c:\xampp\htdocs\clientes
+```
 
 ## Geração do Código com o bake
 ```php
