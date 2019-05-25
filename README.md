@@ -72,13 +72,13 @@ Rotas – config/routes.php, configure para Users/login:
 
 https://github.com/ribafs/admin-br
 
-Descompacte e copie estes dois arquivos:
+Descompacte e copie estes dois arquivos da pasta descompactada:
 ```php
-bootstrap_cli.php /var/www/html/clientes/config (sobrescrevendo o existente)
-AppController.php /var/www/html/clientes/src/Controller (sobrescrevendo o existente)
+copiar/bootstrap_cli.php /var/www/html/clientes/config (sobrescrevendo o existente)
+copiar/AppController.php /var/www/html/clientes/src/Controller (sobrescrevendo o existente)
 ou
-bootstrap_cli.php c:\xampp\htdocs\clientes\config (sobrescrevendo o existente)
-AppController.php c:\xampp\htdocs\clientes\src\Controller (sobrescrevendo o existente)
+copiar\bootstrap_cli.php c:\xampp\htdocs\clientes\config (sobrescrevendo o existente)
+copiar\AppController.php c:\xampp\htdocs\clientes\src\Controller (sobrescrevendo o existente)
 ```
 ## Execute a migration
 ```php
