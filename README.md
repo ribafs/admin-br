@@ -2,6 +2,8 @@
 
 ## Testado com até a versão 3.7.7 do CakePHP.
 
+### Este plugin continua o cake-acl-br
+
 Idealmente instale em um ambiente de testes para ter maior controle.
 
 URL deste projeto - https://github.com/ribafs/admin-br/
