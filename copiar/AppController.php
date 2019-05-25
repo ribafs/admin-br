@@ -80,9 +80,9 @@ class AppController extends Controller
 	    	// $this->set('template',$layout);
 
 		if($loguser == 'user' || $loguser == 'manager'){
-			$this->viewBuilder()->setLayout('CakeAclBr.default');
+			$this->viewBuilder()->setLayout('AdminBr.default');
 		}else{
-			$this->viewBuilder()->setLayout('CakeAclBr.admin');
+			$this->viewBuilder()->setLayout('AdminBr.admin');
 		}
 
 		// Descomente para acesso total aos actions abaixo
