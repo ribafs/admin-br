@@ -29,11 +29,11 @@ Agora temos validação pelo frontend usando recursos do HTML5, pattern e minlen
     
 ## Criação de aplicativo usando o admin-br com bastante detalhes
 
-Tutorial passo a passo e com boas informações para customizar aplicativos do CakePHP 3. Confira.
+Abaixo um guia passo a passo e com boas informações para customizar aplicativos do CakePHP 3.
 
 Chamarei o aplicativo de clientes
 
-### Criar o banco de dados cliente e importar o script admin-br-my.sql da pasta docs
+### Criar um banco de dados chamado cliente para testes iniciais
 
 ### Instalação do CakePHP 3
 
@@ -72,13 +72,20 @@ Rotas – config/routes.php, configure para Users/login:
 
 https://github.com/ribafs/admin-br
 
-Descompacte, acesse o diretório e execute o script adminbr.sh ou adminbr.bat
+Descompacte e copie estes dois arquivos:
 ```php
-sh adminbr.sh /var/www/html/clientes
+bootstrap_cli.php /var/www/html/clientes/config (sobrescrevendo o existente)
+AppController.php /var/www/html/clientes/src/Controller (sobrescrevendo o existente)
 ou
-adminbr.bat c:\xampp\htdocs\clientes
+bootstrap_cli.php c:\xampp\htdocs\clientes\config (sobrescrevendo o existente)
+AppController.php c:\xampp\htdocs\clientes\src\Controller (sobrescrevendo o existente)
 ```
-Com isso ele copia os dois arquivos (bootstrap_cli.php e AppController.php) e efetua os migrations.
+## Execute a migration
+```php
+cd /var/www/html/clientes (ou cd c:\xampp\htdocs\clientes)
+bin/cake migrations migrate (no windows mude para bin\cake)
+bin/cake migrations sees
+```
 
 ## Geração do Código com o bake
 ```php
