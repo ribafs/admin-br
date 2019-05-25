@@ -92,7 +92,7 @@ No Windows troque a barra:
 
 cd /var/www/html/clientes (ou cd c:\xampp\htdocs\clientes)
 bin/cake migrations migrate (no windows mude para bin\cake)
-bin/cake migrations sees
+bin/cake migrations seed
 ```
 
 ## Geração do Código com o bake
