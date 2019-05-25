@@ -48,7 +48,7 @@ composer require ribafs/admin-br
 ```
 ## Habilitar o Plugin
 ```php
-bin/cake plugin load AdminBr --bootstrap
+bin/cake plugin load AdminBr --bootstrap (no windows troque a barra / por \)
 ```
 ## Configurações
 
@@ -78,14 +78,18 @@ https://github.com/ribafs/admin-br
 
 Descompacte e copie estes dois arquivos da pasta descompactada:
 ```php
+No Linux:
 copiar/bootstrap_cli.php /var/www/html/clientes/config (sobrescrevendo o existente)
 copiar/AppController.php /var/www/html/clientes/src/Controller (sobrescrevendo o existente)
-ou
+
+No windows:
 copiar\bootstrap_cli.php c:\xampp\htdocs\clientes\config (sobrescrevendo o existente)
 copiar\AppController.php c:\xampp\htdocs\clientes\src\Controller (sobrescrevendo o existente)
 ```
 ## Execute a migration
 ```php
+No Windows troque a barra:
+
 cd /var/www/html/clientes (ou cd c:\xampp\htdocs\clientes)
 bin/cake migrations migrate (no windows mude para bin\cake)
 bin/cake migrations sees
@@ -93,6 +97,8 @@ bin/cake migrations sees
 
 ## Geração do Código com o bake
 ```php
+No Windows troque a barra:
+
 cd clientes
 bin/cake bake all groups -t AdminBr
 bin/cake bake all users -t AdminBr
