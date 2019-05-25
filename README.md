@@ -91,8 +91,8 @@ copiar\AppController.php c:\xampp\htdocs\clientes\src\Controller (sobrescrevendo
 No Windows troque a barra:
 
 cd /var/www/html/clientes (ou cd c:\xampp\htdocs\clientes)
-bin/cake migrations migrate (no windows mude para bin\cake)
-bin/cake migrations seed
+bin/cake migrations migrate -p AdminBr (no windows mude para bin\cake)
+bin/cake migrations seed -p AdminBr
 ```
 
 ## Geração do Código com o bake
