@@ -38,7 +38,7 @@ Chamarei o aplicativo de clientes
 ### Instalação do CakePHP 3
 
 ```php
-cd /var/www/html
+cd /var/www/html ou cd c:\xampp\htdocs
 composer create-project --prefer-dist cakephp/app clientes
 cd clientes
 ```
@@ -64,8 +64,11 @@ por
  'errorLevel' => E_ALL & ~E_USER_DEPRECATED,
 ```
 
-Rotas – config/routes.php, cophpnfigure para Users/login:
+Rotas – config/routes.php, comente esta linha abaixo:
 ```php
+    //$routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+E adicione esta:
+
     $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
 ```    
 
