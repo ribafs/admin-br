@@ -138,7 +138,7 @@ Observe que as senhas tem um padrão para facilitar a memorização:
 
 Veja o tutorial para customização do aplicativo com mais informações:
 
-https://github.com/ribafs/admin-br
+https://github.com/ribafs/admin-br/TUTORIAL.md
 
 ## Sugestões, colaborações, issues, pull requests e forks serão muto bem vindos:
 
