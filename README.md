@@ -64,9 +64,10 @@ por
  'errorLevel' => E_ALL & ~E_USER_DEPRECATED,
 ```
 
-Rotas – config/routes.php, configure para Users/login:
-
+Rotas – config/routes.php, cophpnfigure para Users/login:
+```php
     $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
+```    
 
 ## Efetue o download do plugin do GitHub
 
