@@ -8,7 +8,7 @@ Idealmente instale em um ambiente de testes para ter maior controle.
 
 URL deste projeto - https://github.com/ribafs/admin-br/
 
-Este plugin inclue o plugin BootstrapUI e o (Twitter) Bootstrap e também inclui os templates do bake do plugin [twbs-cake-plugin](https://github.com/elboletaire/twbs-cake-plugin) aos autores dos quais gostaria de agradecer.
+Este plugin inclue o plugin [BootstrapUI](https://github.com/friendsofcake/bootstrap-ui) e o (Twitter) Bootstrap e também inclui os templates do bake do plugin [twbs-cake-plugin](https://github.com/elboletaire/twbs-cake-plugin) aos autores dos quais gostaria de agradecer.
 
 ## Principais recursos    
     • Menu de topo com o element topmenu 
