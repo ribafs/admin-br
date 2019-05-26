@@ -71,7 +71,16 @@ E adicione esta:
 
     $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
 ```    
+## Executar o composer update no plugin
+```php
+Linux:
+cd /var/www/html/clientes/vendor/ribafs/admin-br
 
+Windows:
+cd c:\xampp\htdocs\clientes\vendor\ribafs\admin-br
+
+composer update
+```
 ## Efetue o download do plugin do GitHub
 
 https://github.com/ribafs/admin-br
