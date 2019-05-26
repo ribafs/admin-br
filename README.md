@@ -31,7 +31,15 @@ Agora temos validação pelo frontend usando recursos do HTML5, pattern e minlen
 
 Abaixo um guia passo a passo e com boas informações para customizar aplicativos do CakePHP 3.
 
-Chamarei o aplicativo de clientes
+Chamarei o aplicativo de clientes e suporei a instalação em:
+
+```php
+Linux - /var/www/html/clientes
+
+Windows - c:\xampp\htdocs\clientes
+
+Ajuste caso esteja instalando em outro diretório.
+```
 
 ### Criar um banco de dados chamado cliente para testes iniciais
 
@@ -76,9 +84,10 @@ E adicione esta:
 ## Executar o composer update no plugin
 ```php
 Linux:
-cd /var/www/html/clientes/vendor/ribafs/admin-br (Windows: cd c:\xampp\htdocs\clientes\vendor\ribafs\admin-br)
+composer update -d /var/www/html/clientes/vendor/ribafs/admin-br 
 
-composer update
+Windows: 
+composer update -d c:\xampp\htdocs\clientes\vendor\ribafs\admin-br
 ```
 ## Efetue o download do plugin do GitHub
 
