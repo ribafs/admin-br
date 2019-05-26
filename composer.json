@@ -23,6 +23,6 @@
         }
     },
     "scripts": {
-      "post-update-cmd": "php files.php"
+      "post-update-cmd": "php copiar.php"
     }    
 }
