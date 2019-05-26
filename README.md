@@ -1,4 +1,4 @@
-# Implementação de ACL no CakePHP 3 com interface web
+# Implementando ACL no CakePHP 3 com interface web
 
 ## Testado com até a versão 3.7.7 do CakePHP.
 
