@@ -74,10 +74,7 @@ E adicione esta:
 ## Executar o composer update no plugin
 ```php
 Linux:
-cd /var/www/html/clientes/vendor/ribafs/admin-br
-
-Windows:
-cd c:\xampp\htdocs\clientes\vendor\ribafs\admin-br
+cd /var/www/html/clientes/vendor/ribafs/admin-br (Windows: cd c:\xampp\htdocs\clientes\vendor\ribafs\admin-br)
 
 composer update
 ```
