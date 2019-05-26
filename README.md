@@ -48,7 +48,9 @@ composer require ribafs/admin-br
 ```
 ## Habilitar o Plugin
 ```php
-bin/cake plugin load AdminBr --bootstrap (no windows troque a barra / por \)
+bin/cake plugin load AdminBr --bootstrap 
+
+(no windows troque bin/cake por bin\cake)
 ```
 ## Configurações
 
