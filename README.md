@@ -84,7 +84,8 @@ E adicione esta:
 ## Executar o composer update no plugin
 ```php
 Linux:
-composer update -d /var/www/html/clientes/vendor/ribafs/admin-br 
+cd /var/www/html/clientes
+composer dump-autoload -d vendor/ribafs/admin-br 
 
 Windows: 
 composer update -d c:\xampp\htdocs\clientes\vendor\ribafs\admin-br
