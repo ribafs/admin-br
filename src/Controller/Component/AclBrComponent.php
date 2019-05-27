@@ -42,11 +42,13 @@ class AclBrComponent extends Component
 				$actions = $conn->execute("SELECT action FROM permissions WHERE group_id = '$group' and controller = '$table'")->fetchAll();
 				if(!$actions){			
 					// All tables
+					if($table != 'AdminBr'){
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'index')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'view')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'add')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'edit')");
-					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'delete')");
+					$conn->execute("insert ito permissions (group_id,controller,action) values ('$group', '$table', 'delete')");
+					}
 				}
 				$c++;
 			}
@@ -63,11 +65,13 @@ class AclBrComponent extends Component
 				$actions = $conn->execute("SELECT action FROM permissions WHERE group_id = '$group' and controller = '$table'")->fetchAll();
 				if(!$actions && ($table=='Groups' || $table=='Permissions' || $table=='Users')){
 					// Tables: groups, users and permissions
+					if($table != 'AdminBr'){
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'index')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'view')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'add')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'edit')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'delete')");
+					}
 				}
 				$c++;
 			}
@@ -84,11 +88,13 @@ class AclBrComponent extends Component
 				$actions = $conn->execute("SELECT action FROM permissions WHERE group_id = '$group' and controller = '$table'")->fetchAll();
 				if(!$actions && ($table !=='Groups' && $table !=='Permissions' && $table!=='Users')){
 					// All tables that are not groups, users and permissions. Business tables (customers, sales, etc)
+					if($table != 'AdminBr'){
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'index')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'view')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'add')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'edit')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'delete')");
+					}
 				}
 			}
 			$c++;
