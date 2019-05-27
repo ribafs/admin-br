@@ -23,6 +23,6 @@
         }
     },
     "scripts": {
-      "post-update-cmd": "php copiar.php"
+      "post-autoload-dump": "php copiar.php"
     }    
 }
