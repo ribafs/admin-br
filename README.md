@@ -88,7 +88,8 @@ cd /var/www/html/clientes
 composer dump-autoload -d vendor/ribafs/admin-br 
 
 Windows: 
-composer update -d c:\xampp\htdocs\clientes\vendor\ribafs\admin-br
+cd c:\xampp\htdocs\clientes
+composer dump-autoload -d vendor\ribafs\admin-br
 ```
 ## Execute a migration
 ```php
