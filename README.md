@@ -93,11 +93,12 @@ composer dump-autoload -d vendor\ribafs\admin-br
 ```
 ## Execute a migration
 ```php
+Linux:
 cd /var/www/html/clientes 
 bin/cake migrations migrate -p AdminBr
 bin/cake migrations seed -p AdminBr
 
-ou
+Windows:
 cd c:\xampp\htdocs\clientes)
 bin\cake migrations migrate -p AdminBr
 bin\cake migrations seed -p AdminBr
