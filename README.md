@@ -94,14 +94,14 @@ composer dump-autoload -d vendor\ribafs\admin-br
 ## Execute a migration
 ```php
 cd /var/www/html/clientes 
-ou
-cd c:\xampp\htdocs\clientes)
-
-No windows mude para bin\cake:
 bin/cake migrations migrate -p AdminBr
 bin/cake migrations seed -p AdminBr
-```
 
+ou
+cd c:\xampp\htdocs\clientes)
+bin\cake migrations migrate -p AdminBr
+bin\cake migrations seed -p AdminBr
+```
 ## Geração do Código com o bake
 ```php
 No Windows troque a barra:
