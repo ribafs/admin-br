@@ -47,7 +47,7 @@ class AclBrComponent extends Component
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'view')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'add')");
 					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'edit')");
-					$conn->execute("insert ito permissions (group_id,controller,action) values ('$group', '$table', 'delete')");
+					$conn->execute("insert into permissions (group_id,controller,action) values ('$group', '$table', 'delete')");
 					}
 				}
 				$c++;
