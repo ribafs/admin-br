@@ -105,13 +105,20 @@ bin\cake migrations seed -p AdminBr
 ```
 ## Geração do Código com o bake
 ```php
-No Windows troque a barra:
+Linux:
 
 cd clientes
 bin/cake bake all groups -t AdminBr
 bin/cake bake all users -t AdminBr
 bin/cake bake all permissions -t AdminBr
 bin/cake bake all customers -t AdminBr
+
+No Windows:
+cd clientes
+bin\cake bake all groups -t AdminBr
+bin\cake bake all users -t AdminBr
+bin\cake bake all permissions -t AdminBr
+bin\cake bake all customers -t AdminBr
 ```
 ## Testes de uso do aplicativo
 
