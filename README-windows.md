@@ -67,3 +67,37 @@ bin\cake bake all users -t AdminBr
 bin\cake bake all permissions -t AdminBr
 bin\cake bake all customers -t AdminBr
 ```
+## Testes de uso do aplicativo
+
+http://localhost/clientes
+
+Ao abrir no navegador vemos:
+
+![](images/cakeaclbr1.png)
+
+Existem 4 usuários cadastrados:
+```php
+super – manda chuva, pode tudo
+admin – somente pode tudo nas tabelas administrativas: users, groups e permissions
+manager – pode tudo somente na tabela customers
+user – não pode nada, somente logar. Requer liberação de permissões
+```
+Obs.: a senha de cada um é esta:
+```php
+super – abc123S@
+admin – abc123A@
+manager – abc123M@
+user – abc123U@
+```
+
+Observe que as senhas tem um padrão para facilitar a memorização:
+
+- Parte fixa para todos – abc123
+- Primeira letra do login em maiúscula
+- Todos finalizam com @
+
+## Mais Detalhes?
+
+Veja o tutorial para customização do aplicativo com mais informações:
+
+https://github.com/ribafs/admin-br/blob/master/TUTORIAL.md
