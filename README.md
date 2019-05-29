@@ -37,7 +37,7 @@ Abaixo um guia passo a passo e com boas informações para customizar aplicativo
 
 https://github.com/ribafs/admin-br/blob/master/README-windows.md
 
-## Guia de instalação no Linux
+## Guia de instalação para Linux
 
 https://github.com/ribafs/admin-br/blob/master/README-linux.md
 
