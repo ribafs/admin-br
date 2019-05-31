@@ -21,16 +21,9 @@ class AppController extends Controller
 {
 	// Controller default para usuários não admins em 
 	protected $noAdmins = 'Customers';
-		
-	public $helpers = [
-		'BootstrapUI.Form',
-		'BootstrapUI.Html',
-		'BootstrapUI.Flash',
-		'BootstrapUI.Paginator'
-	];	
 
-    public function initialize()
-    {
+    	public function initialize()
+    	{
         parent::initialize();
 
         $this->loadComponent('RequestHandler');
@@ -108,7 +101,7 @@ class AppController extends Controller
 				return $this->redirect($this->referer());
 			}
 		}
-    }
+    	}
 
 	public function isAuthorized($user)
 	{
@@ -127,8 +120,8 @@ class AppController extends Controller
 		return parent::isAuthorized($user);
 	}
 
-    public function beforeRender(Event $event)
-    {	    
+    	public function beforeRender(Event $event)
+    	{	    
         if (!array_key_exists('_serialize', $this->viewVars) && in_array($this->response->getType(), ['application/json', 'application/xml'])) {
             $this->set('_serialize', true);
         }
