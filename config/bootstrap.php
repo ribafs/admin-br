@@ -1,8 +1,6 @@
 <?php
 use Cake\Core\Plugin;
 
-Plugin::load('BootstrapUI');
-
 // Habilita o parseamento de datas localizadas
 date_default_timezone_set('America/Fortaleza');
 
