@@ -23,6 +23,7 @@ $fields = collection($fields)
     });
 $pk = "\${$singularVar}->{$primaryKey[0]}";
 %>
+<div class="container">
 <div class="actions columns col-lg-2 col-md-3">
     <h3><?= __('Ações') ?></h3>
     <ul class="nav nav-stacked nav-pills">
@@ -59,7 +60,6 @@ $pk = "\${$singularVar}->{$primaryKey[0]}";
     <?= $this->Form->create($<%= $singularVar %>); ?>
     <fieldset>
         <legend><?= __('<%= Inflector::humanize($action) %> <%= $singularHumanName %>') ?></legend>
-        <?php
 <%
         foreach ($fields as $field) {
             if (in_array($field, $primaryKey)) {
@@ -68,32 +68,32 @@ $pk = "\${$singularVar}->{$primaryKey[0]}";
             if (isset($keyFields[$field])) {
                 $fieldData = $schema->column($field);
                 if (!empty($fieldData['null'])) {
-%>
-            echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>, 'empty' => true]);
+%>            
+            <div class="form-group"><?php echo $this->Form->input('<%= $field %>',['class'=>'form-control'],['options' => $<%= $keyFields[$field] %>, 'empty' => true]);?></div>
 <%
                 } else {
 %>
-            echo $this->Form->input('<%= $field %>', ['options' => $<%= $keyFields[$field] %>, 'autofocus'=>'true']);
+            <div class="form-group"><?php echo $this->Form->input('<%= $field %>',['class'=>'form-control'],['options' => $<%= $keyFields[$field] %>, 'autofocus'=>'true']);?>
 <%
                 }
                 continue;
             }
             if (!in_array($field, ['created', 'modified', 'updated'])) {
 %>
-            echo $this->Form->input('<%= $field %>');
+            <div class="form-group"><?php echo $this->Form->input('<%= $field %>',['class'=>'form-control']);?></div>
 <%
             }
         }
         if (!empty($associations['BelongsToMany'])) {
             foreach ($associations['BelongsToMany'] as $assocName => $assocData) {
 %>
-            echo $this->Form->input('<%= $assocData['property'] %>._ids', ['options' => $<%= $assocData['variable'] %>]);
+            <div class="form-group"><?php echo $this->Form->input('<%= $assocData['property'] %>._ids',['class'=>'form-control'], ['options' => $<%= $assocData['variable'] %>]);?></div>
 <%
             }
         }
 %>
-        ?>
     </fieldset>
-    <?= $this->Form->button(__('Enviar'), ['class' => 'btn-success']) ?>
+    <?= $this->Form->button(__('Enviar'), ['class' => 'btn btn-default']) ?>
     <?= $this->Form->end() ?>
+</div>
 </div>
