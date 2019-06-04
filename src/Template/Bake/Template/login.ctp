@@ -24,7 +24,7 @@
             <div class="form-group"><?= $this->Form->input('username', ['label'=>'Login', 'class'=>'col4 form-control', 'autofocus'=>'true']) ?></div>
             <div class="form-group"><?= $this->Form->input('password',['label'=>'Senha', 'class'=>'col4 form-control', 'pattern'=>'^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$', 'minlenght'=>8, 'title'=>'Favor digitar uma senha com pelo menos 8 dígitos, sendo pelo menos 1 algarismo, um minúsculo, um maiúsculo e um símbolo']) ?></div>
         </fieldset>
-        <?= $this->Form->button(__('Acessar', ['class' => 'btn btn-default'])); ?>
+        <?= $this->Form->button(__('Acessar'), ['class' => 'btn btn-default']); ?>
         <?= $this->Form->end() ?>
     </div>
 </div>
