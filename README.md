@@ -7,6 +7,7 @@ Com MySQL e com PostgreSQL
 ### Este plugin continua o cake-acl-br
 
 Idealmente instale em um ambiente de testes para ter maior controle.
+@octocat :+1:
 
 URL deste projeto - https://github.com/ribafs/admin-br/
 
