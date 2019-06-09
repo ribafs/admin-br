@@ -96,6 +96,6 @@
             <?= $this->Paginator->next(__('próximo') . ' >') ?>
             <?= $this->Paginator->last(__('último') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Página {{ '{{' }}página{{ '}}' }} of {{ '{{' }}páginas{{ '}}' }}, mostrando {{ '{{' }}atual{{ '}}' }} registro(s) de um total de {{ '{{' }}count{{ '}}' }} ')]) ?></p>
+            <p><?= $this->Paginator->counter(['format' => __('Página {{ '{{' }}page{{ '}}' }} of {{ '{{' }}pages{{ '}}' }}, mostrando {{ '{{' }}current{{ '}}' }} registro(s) de um total de {{ '{{' }}count{{ '}}' }} ')]) ?></p>
     </div>
 </div>
