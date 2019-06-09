@@ -20,11 +20,10 @@ Este plugin inclue o plugin [BootstrapUI](https://github.com/friendsofcake/boots
     • Controle de Acesso tipo ACL com administração web 
     • Dois Layouts: admin e default com cor de fundo que os diferencia
     • Datas formatadas como pt-br (veja em Customers)
-    • Tradução do template do Bake para pt-br
+    • Tradução do template do Bake para pt-br. A partir da versão 1.15 usando twig para compatibilizar com o CakePHP 4
     • Customização do bootstrap_cli adicionando os campos login e logout na geração do Bake
     • Validação via frontend no login com pattern e minlenght, para exigir senha forte, com pelo menos 8 dígitos,     
-    uma maiúscula, uma minúscula e um símbolo. Também com recomendações para validação semelhante pelo CakePHP no
-    UsersTable.php
+    uma maiúscula, uma minúscula e um símbolo. Também com recomendações para validação semelhante pelo CakePHP no    UsersTable.php
 
 ## Com esta versão temos validação no login
 Agora temos validação pelo frontend usando recursos do HTML5, pattern e minlenght e também pelo UsersTable.php
