@@ -26,19 +26,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->css('AdminBr.bootstrap.min.css') ?>
-    <?= $this->Html->script('AdminBr.jquery.min') ?>
-    <?= $this->Html->script('AdminBr.bootstrap.min') ?>    
+    <?= $this->Html->css('AdminBr.bootstrap.min.css') ?>   
     <?= $this->Html->css('AdminBr.custom.css') ?>    
 
     <?php    echo $this->fetch('css'); ?>
-
-    <script type="text/javascript">
-        $(document).ready(function(){
-            $('[data-toggle="popover"]').popover();   
-        });
-    </script>
-
 </head>
 <body>
     <header role="banner" class="navbar navbar-inverse">
@@ -48,8 +39,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 ?>
         <h2 align="center" class="titulo"><?= $titulo ?></h2>
         <h3 class="titulo"><?php echo $this->element('AdminBr.topmenu') ?></h3>
-        <button type="button" class="btn btn-info col-md-1" data-toggle="popover" data-placement="bottom" title="Ajuda para o Aplicativo" data-content="Aqui adicione a ajuda do usuário. Como ele deve proceder para usar o aplicativo..">Ajuda</button><div class="col-md-4"></div>
-        <spam class="logado col-centered"><?= $this->fetch('title') ?></spam>
         <spam class="logado pull-right">Logado como: <strong><?=__($loguser) ?></strong></spam>        
 <?php
     }else{
