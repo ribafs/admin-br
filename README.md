@@ -10,6 +10,10 @@ Idealmente instale em um ambiente de testes para ter maior controle.
 
 URL deste projeto - https://github.com/ribafs/admin-br/
 
+### Para um plugin sem o BootStrap indico:
+
+https://github.com/ribafs/admin-default-br
+
 Este plugin inclue o Twitter Bootstrap e também inclui os templates do bake do plugin [twbs-cake-plugin](https://github.com/elboletaire/twbs-cake-plugin). Ao autor do mesmo gostaria de agradecer.
 
 ## Principais recursos    
