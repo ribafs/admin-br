@@ -1,0 +1,79 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+{% set fields = Bake.filterFields(fields, schema, modelObject) %}
+<div class="actions columns col-lg-2 col-md-3">
+    <h3><?= __('Ações') ?></h3>
+    <ul class="nav nav-stacked nav-pills">
+        <li class="active disabled"><?= $this->Html->link(__('Novo Permission'), ['action' => 'add']) ?></li>
+{% if strpos(action, 'add') is same as(false) %}
+        <li><?= $this->Form->postLink(
+                __('Excluir'),
+                ['action' => 'delete', ${{ singularVar }}->{{ primaryKey[0] }}],
+                ['confirm' => __('Deseja realmente excluir # {0}?', ${{ singularVar }}->{{ primaryKey[0] }}),'class' => 'btn-danger']
+            )
+        ?></li>
+{% endif %}
+        <li><?= $this->Html->link(__('Listar {{ pluralHumanName }}'), ['action' => 'index']) ?></li>
+        {{- "\n" }}
+{%- set done = [] %}
+{% for type, data in associations %}
+    {%- for alias, details in data %}
+        {%- if details.controller is not same as(_view.name) and details.controller not in done %}
+        <li><?= $this->Html->link(__('Listar {{ alias|underscore|humanize }}'), ['controller' => '{{ details.controller }}', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Novo {{ alias|singularize|underscore|humanize }}'), ['controller' => '{{ details.controller }}', 'action' => 'add']) ?></li>
+        {{- "\n" }}
+        {%- set done = done|merge([details.controller]) %}
+        {%- endif %}
+    {%- endfor %}
+{% endfor %}
+    </ul>
+</div>
+<div class="{{ pluralVar }} form col-lg-10 col-md-9 columns">
+    <?= $this->Form->create(${{ singularVar }}) ?>  
+        <legend><?= __('{{ action|humanize }} {{ singularHumanName }}') ?></legend>
+        <?php
+{% for field in fields if field not in primaryKey %}
+    {%- if keyFields[field] %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+        {%- if fieldData.null %}
+            echo '<div class="form-group">'.$this->Form->control('{{ field }}', ['options' => ${{ keyFields[field] }}, 'empty' => true,'class'=>'form-control']).'</div>';
+            {{- "\n" }}
+        {%- else %}
+            echo '<div class="form-group">'.$this->Form->control('{{ field }}', ['options' => ${{ keyFields[field] }},'class'=>'form-control']).'</div>';
+            {{- "\n" }}
+        {%- endif %}
+    {%- elseif field not in ['created', 'modified', 'updated'] %}
+        {%- set fieldData = Bake.columnData(field, schema) %}
+        {%- if fieldData.type in ['date', 'datetime', 'time'] and fieldData.null %}
+            echo '<div class="form-group">'.$this->Form->control('{{ field }}', ['empty' => true,'class'=>'form-control']).'</div>';
+            {{- "\n" }}
+        {%- else %}
+            echo '<div class="form-group">'.$this->Form->control('{{ field }}',['class'=>'form-control']).'</div>';
+    {{- "\n" }}
+        {%- endif %}
+    {%- endif %}
+{%- endfor %}
+
+{%- if associations.BelongsToMany %}
+    {%- for assocName, assocData in associations.BelongsToMany %}
+            echo $this->Form->control('{{ assocData.property }}._ids', ['options' => ${{ assocData.variable }},'class'=>'form-control']);
+    {{- "\n" }}
+    {%- endfor %}
+{% endif %}
+        ?>
+    <?= $this->Form->button(__('Enviar'), ['class' => 'btn btn-default']) ?>
+    <?= $this->Form->end() ?>
+</div>

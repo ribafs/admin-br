@@ -1,0 +1,101 @@
+{#
+/**
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
+ * @since         2.0.0
+ * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+ */
+#}
+<?php
+/**
+ * @var \{{ namespace }}\View\AppView $this
+ * @var \{{ entityClass }}[]|\Cake\Collection\CollectionInterface ${{ pluralVar }}
+ */
+?>
+{% set fields = Bake.filterFields(fields, schema, modelObject, indexColumns, ['binary', 'text']) %}
+<div class="actions columns col-lg-2 col-md-3">
+    <li><?= __('Ações') ?></li>
+    <ul class="nav nav-stacked nav-pills">
+        <li><?= $this->Html->link(__('Novo {{ singularHumanName }}'), ['action' => 'add']) ?></li>
+{% set done = [] %}
+{% for type, data in associations %}
+{% for alias, details in data %}
+{% if details.navLink and details.controller is not same as(_view.name) and details.controller not in done %}
+        <li class="active disabled"><?= $this->Html->link(__('Listar {{ alias|underscore|humanize }}'), ['controller' => '{{ details.controller }}', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Novo {{ alias|singularize|underscore|humanize }}'), ['controller' => '{{ details.controller }}', 'action' => 'add']) ?></li>
+{% set done = done|merge([details.controller]) %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+    </ul>
+	<?php
+	/*
+	    echo $this->Form->create(null, ['type' => 'get']);
+   	    echo $this->Form->label('Search');
+	    echo $this->Form->input('search', ['class' => 'form-control', 'label' => false, 'style'=>'width:170px;',
+		'placeholder' => 'Name or phone', 'value' => $this->request->getQuery('search')]);	    
+	    echo $this->Form->button('Send', ['class'=>'btn btn-default']);
+	    echo $this->Form->end();
+	*/
+	?>            
+</div>
+<div class="{{ pluralVar }} index col-lg-10 col-md-9 columns">
+    <h3><?= __('{{ pluralHumanName }}') ?></h3>
+    <div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+{% for field in fields %}
+                <th scope="col"><?= $this->Paginator->sort('{{ field }}') ?></th>
+{% endfor %}
+                <th scope="col" class="actions"><?= __('Ações') ?></th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach (${{ pluralVar }} as ${{ singularVar }}): ?>
+            <tr>
+{% for field in fields %}
+{% set isKey = false %}
+{% if associations.BelongsTo %}
+{% for alias, details in associations.BelongsTo if field == details.foreignKey %}
+{% set isKey = true %}
+                <td><?= ${{ singularVar }}->has('{{ details.property }}') ? $this->Html->link(${{ singularVar }}->{{ details.property }}->{{ details.displayField }}, ['controller' => '{{ details.controller }}', 'action' => 'view', ${{ singularVar }}->{{ details.property }}->{{ details.primaryKey[0] }}]) : '' ?></td>
+{% endfor %}
+{% endif %}
+{% if isKey is not same as(true) %}
+{% set columnData = Bake.columnData(field, schema) %}
+{% if columnData.type not in ['integer', 'float', 'decimal', 'biginteger', 'smallinteger', 'tinyinteger'] %}
+                <td><?= h(${{ singularVar }}->{{ field }}) ?></td>
+{% else %}
+                <td><?= $this->Number->format(${{ singularVar }}->{{ field }}) ?></td>
+{% endif %}
+{% endif %}
+{% endfor %}
+{% set pk = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
+                <td class="actions">
+                    <?= $this->Html->link(__('Ver'), ['action' => 'view', {{ pk|raw }}]) ?>
+                    <?= $this->Html->link(__('Editar'), ['action' => 'edit', {{ pk|raw }}]) ?>
+                    <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Deseja realmente excluir # {0}?', {{ pk|raw }})]) ?>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+    <div class="paginator">
+        <ul class="pagination">
+            <?= $this->Paginator->first('<< ' . __('primeiro')) ?>
+            <?= $this->Paginator->prev('< ' . __('anterior')) ?>
+            <?= $this->Paginator->numbers() ?>
+            <?= $this->Paginator->next(__('próximo') . ' >') ?>
+            <?= $this->Paginator->last(__('último') . ' >>') ?>
+        </ul>
+        <p><?= $this->Paginator->counter(['format' => __('Página {{ '{{' }}página{{ '}}' }} of {{ '{{' }}páginas{{ '}}' }}, mostrando {{ '{{' }}atual{{ '}}' }} registro(s) de um total de {{ '{{' }}count{{ '}}' }} ')]) ?></p>
+    </div>
+</div>
