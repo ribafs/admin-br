@@ -84,13 +84,11 @@
                     <?= $this->Html->link(__('Editar'), ['action' => 'edit', {{ pk|raw }}]) ?>
                     <?php
                     if (isset($loguser)){
-			if($loguser != 'user'){
-			?>		    
-                    <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Deseja realmente excluir # {0}?', {{ pk|raw }})]) ?>
-			<?php
+			if($loguser != 'user'){	    
+                    		print $this->Form->postLink(__('Excluir'), ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Deseja realmente excluir # {0}?', {{ pk|raw }})]);
 			}
                     }else{
-		    <?= $this->Form->postLink(__('Excluir'), ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Deseja realmente excluir # {0}?', {{ pk|raw }})]) ?>		    
+		    	print $this->Form->postLink(__('Excluir'), ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Deseja realmente excluir # {0}?', {{ pk|raw }})]);
 		    }
 		    ?>
                 </td>
