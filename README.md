@@ -45,7 +45,7 @@ https://github.com/ribafs/admin-br/blob/master/README-windows.md
 https://github.com/ribafs/admin-br/blob/master/README-linux.md
 
 
-## Sugestões, colaborações, issues, pull requests e forks serão muto bem vindos:
+## Sugestões, colaborações, issues, pull requests e forks serão bem vindos:
 
 - Português
 - PHP
