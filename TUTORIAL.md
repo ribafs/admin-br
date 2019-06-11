@@ -26,6 +26,12 @@ Veja que ele está logado mas não tem permissão de acessar nada e foi jogado p
 
 Para que ele enha acesso precisamos usar um dos usuários com privilégio administrativo para cadastrar permissões para ele. A tela de permissões é onde damos privilégios para usuários acessarem e efetuarem outras atividades.
 
+## Sempre que adicionar um novo action em qualquer controller
+
+Ao tentar acessar um novo action ainda não registrado no Permissions, recebemos o erro abaixo e não interessa que estejamos logado como super:
+
+![](images/adminbr1.png)
+
 ## Concedendo permissão para o user acessar a index de customers
 
 - Logar como admin
