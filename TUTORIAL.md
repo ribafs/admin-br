@@ -28,7 +28,7 @@ Para que ele enha acesso precisamos usar um dos usuários com privilégio admini
 
 ## Sempre que adicionar um novo action em qualquer controller
 
-Ao tentar acessar um novo action ainda não registrado no Permissions, recebemos o erro abaixo e não interessa que estejamos logado como super:
+Ao tentar acessar um novo action ainda não registrado no Permissions, recebemos o erro abaixo e não interessa que estejamos logado como super. Adicionei o action password no controller Users e antes de registrá-lo tentei acessar:
 
 ![](images/adminbr1.png)
 
