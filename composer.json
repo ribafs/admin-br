@@ -21,6 +21,10 @@
             "AdminBr\\": "src"
         }
     },
+    "suggest": {
+        "cakephp/acl": "Plugin for managing ACL in CakePHP applications.",
+        "mattmemmesheimer/cakephp-3-acl-example": "cakephp-3-acl-example."
+    },    
     "scripts": {
       "post-autoload-dump": "php copiar.php"
     }    
