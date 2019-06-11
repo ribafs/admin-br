@@ -44,6 +44,13 @@ https://github.com/ribafs/admin-br/blob/master/README-windows.md
 
 https://github.com/ribafs/admin-br/blob/master/README-linux.md
 
+## Alternativa para implantação de ACL em Aplicativos do CakePHP
+
+A alternativa de plugin para uso no terminal/prompt é o uso do plugin oficial
+https://github.com/cakephp/acl
+
+Aqui abaixo um ótimo exemplo de uso do mesmo
+https://github.com/mattmemmesheimer/cakephp-3-acl-example
 
 ## Sugestões, colaborações, issues, pull requests e forks serão bem vindos:
 
