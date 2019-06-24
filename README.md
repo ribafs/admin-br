@@ -1,12 +1,13 @@
 # Implementando ACL no CakePHP 3 com interface web
 
-## Testado
+### Testado
 - Com até a versão 3.7.8 do CakePHP
 - No Windows e no Linux
 - Com MySQL e com PostgreSQL
 
 ### Este plugin continua o cake-acl-br
 
+## Instale em ambiente de testes inicialmente
 Idealmente instale em um ambiente de testes para ter maior controle.
 
 URL deste projeto - https://github.com/ribafs/admin-br/
