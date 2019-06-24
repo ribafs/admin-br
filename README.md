@@ -18,7 +18,7 @@ https://github.com/ribafs/admin-br/
 https://github.com/ribafs/admin-default-br
 
 ### Sobre este plugin
-Este plugin inclue o Twitter Bootstrap e também inclui o plugin [Bootstrap-UI](https://github.com/FriendsOfCake/bootstrap-ui) e os templates do bake do plugin [twbs-cake-plugin](https://github.com/elboletaire/twbs-cake-plugin). Aos autores dos mesmos fica aqui meu agradecimento.
+Este plugin inclue o Twitter Bootstrap e também inclui o plugin [Bootstrap-UI](https://github.com/FriendsOfCake/bootstrap-ui) e os templates do bake do plugin [twbs-cake-plugin](https://github.com/elboletaire/twbs-cake-plugin) que nesta versão (1.19) mudei as tags do ASP para as do Twig. Aos autores dos mesmos fica aqui meu agradecimento.
 
 ## Principais recursos    
     • Menu de topo com o element topmenu 
