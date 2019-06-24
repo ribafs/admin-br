@@ -1,7 +1,7 @@
 # Implementando ACL no CakePHP 3 com interface web
 
 ### Testado
-- Com até a versão 3.7.8 do CakePHP
+- Com até a versão 3.7.9 do CakePHP
 - No Windows e no Linux
 - Com MySQL e com PostgreSQL
 
