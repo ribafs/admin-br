@@ -17,7 +17,8 @@ https://github.com/ribafs/admin-br/
 
 https://github.com/ribafs/admin-default-br
 
-Este plugin inclue o Twitter Bootstrap e também inclui os templates do bake do plugin [twbs-cake-plugin](https://github.com/elboletaire/twbs-cake-plugin). Ao autor do mesmo gostaria de agradecer.
+### Sobre este plugin
+Este plugin inclue o Twitter Bootstrap e também inclui o plugin [Bootstrap-UI](https://github.com/FriendsOfCake/bootstrap-ui) e os templates do bake do plugin [twbs-cake-plugin](https://github.com/elboletaire/twbs-cake-plugin). Aos autores dos mesmos fica aqui meu agradecimento.
 
 ## Principais recursos    
     • Menu de topo com o element topmenu 
