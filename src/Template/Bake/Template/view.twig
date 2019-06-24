@@ -44,7 +44,7 @@
     </ul>
 </div>
 <div class="${{ pluralVar }} view col-lg-10 col-md-9 columns">
-    <h2><?= h(${{ singularVar }}->${{ displayField }}) ?></h2>
+    <h2><?= h(${{ singularVar }}->{{ displayField }}) ?></h2>
     <table class="table table-hover table-stripped">
 {% if groupedFields['string'] %}
 {% for field in groupedFields['string'] %}
