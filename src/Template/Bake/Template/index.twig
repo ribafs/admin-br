@@ -24,11 +24,12 @@
     <h3><?= __('Ações') ?></h3>
     <ul class="nav nav-stacked nav-pills">
         <li><?= $this->Html->link(__('Novo {{ singularHumanName }}'), ['action' => 'add']) ?></li>
+	<li class="active"><?= $this->Html->link(__('Listar {{ singularHumanName }}'), ['action' => 'index']) ?></li>	
 {% set done = [] %}
 {% for type, data in associations %}
 {% for alias, details in data %}
 {% if details.navLink and details.controller is not same as(_view.name) and details.controller not in done %}
-        <li class="active disabled"><?= $this->Html->link(__('Listar {{ alias|underscore|humanize }}'), ['controller' => '{{ details.controller }}', 'action' => 'index']) ?></li>
+        <li><?= $this->Html->link(__('Listar {{ alias|underscore|humanize }}'), ['controller' => '{{ details.controller }}', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('Novo {{ alias|singularize|underscore|humanize }}'), ['controller' => '{{ details.controller }}', 'action' => 'add']) ?></li>
 {% set done = done|merge([details.controller]) %}
 {% endif %}
