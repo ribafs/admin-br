@@ -1,0 +1,72 @@
+body{
+    background-color: #f2efe6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #fff;
+    border-color: #2e6da4;
+}
+
+.navbar-inverse {
+    background-color: #000;
+    border-color: #080808;
+}
+.titulo{
+    color: #a8dbf4;
+}
+a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.logado{
+    color: #fff;    
+    font-size:18px;
+}
+
+.comum{
+    background-color: #fff;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+    background-color: #c2dbef !important;
+    text-decoration: none;
+}
+
+/* Para a customização da largura dos campos de form: echo $this->Form->input('grupo',['class'=>'col2']); */
+.col1{
+    width:50px;
+}
+
+.col2{
+    width:100px;
+}
+
+.col3{
+    width:150px;
+}
+
+.col4{
+    width:200px;
+}
+
+.col5{
+    width:250px;
+}
+
+.col6{
+    width:300px;
+}
+
+.col7{
+    width:350px;
+}
+
+.col8{
+    width:400px;
+}
+
+.col9{
+    width:950px;
+}
