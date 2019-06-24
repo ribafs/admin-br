@@ -25,7 +25,7 @@
             )
         ?></li>
 {% endif %}
-        <li><?= $this->Html->link(__('Listar {{ pluralHumanName }}'), ['action' => 'index']) ?></li>
+        <li class="active"><?= $this->Html->link(__('Listar {{ pluralHumanName }}'), ['action' => 'index']) ?></li>
         {{- "\n" }}
 {%- set done = [] %}
 {% for type, data in associations %}
