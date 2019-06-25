@@ -29,7 +29,7 @@
     <ul class="nav nav-stacked nav-pills">
         <li><?= $this->Html->link(__('Editar {{ singularHumanName }}'), ['action' => 'edit', {{ pK|raw }}]) ?> </li>
         <li><?= $this->Form->postLink(__('Excluir {{ singularHumanName }}'), ['action' => 'delete', {{ pK|raw }}], ['confirm' => __('Deseja excluir realmente # {0}?', {{ pK|raw }})]) ?> </li>
-        <li><?= $this->Html->link(__('Listar {{ pluralHumanName }}'), ['action' => 'index']) ?> </li>
+        <li class="active"><?= $this->Html->link(__('Listar {{ pluralHumanName }}'), ['action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('Novo {{ singularHumanName }}'), ['action' => 'add']) ?> </li>
 {% set done = [] %}
 {% for type, data in associations %}
