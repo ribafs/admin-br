@@ -44,7 +44,7 @@
     </ul>
 </div>
 <div class="${{ pluralVar }} view col-lg-10 col-md-9 columns">
-    <h2><?= h(${{ singularVar }}->{{ displayField }}) ?></h2>
+    <h3><?= h(${{ singularVar }}->{{ displayField }}) ?></h3>
     <table class="table table-hover table-stripped">
 {% if groupedFields['string'] %}
 {% for field in groupedFields['string'] %}
@@ -115,7 +115,7 @@
 {% for field in details.fields %}
                 <th scope="col"><?= __('{{ field|humanize }}') ?></th>
 {% endfor %}
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <th scope="col" class="actions"><?= __('Ações') ?></th>
             </tr>
             <?php foreach (${{ singularVar }}->{{ details.property }} as ${{ otherSingularVar }}): ?>
             <tr>
@@ -124,9 +124,9 @@
 {% endfor %}
 {% set otherPk = '$' ~ otherSingularVar ~ '->' ~ details.primaryKey[0] %}
                 <td class="actions">
-                    <?= $this->Html->link(__('<span class="glyphicon glyphicon-zoom-in"></span><span class="sr-only">' . __('Ver') . '</span>'), ['controller' => '{{ details.controller }}', 'action' => 'view', {{ otherPk|raw }}],['class' => 'btn btn-xs btn-default', 'title' => __('Ver')]) ?>
+                    <?= $this->Html->link(__('<span class="glyphicon glyphicon-zoom-in"></span><span class="sr-only">' . __('Ver') . '</span>'), ['controller' => '{{ details.controller }}', 'action' => 'view', {{ otherPk|raw }}],['escape' => false,'class' => 'btn btn-xs btn-default', 'title' => __('Ver')]) ?>
                     <?= $this->Html->link(__('<span class="glyphicon glyphicon-pencil"></span><span class="sr-only">' . __('Editar') . '</span>'), ['controller' => '{{ details.controller }}', 'action' => 'edit', {{ otherPk|raw }}],['escape' => false, 'class' => 'btn btn-xs btn-default', 'title' => __('Editar')]) ?>
-                    <?= $this->Form->postLink(__('<span class="glyphicon glyphicon-trash"></span><span class="sr-only">' . __('Excluir') . '</span>'), ['controller' => '{{ details.controller }}', 'action' => 'delete', {{ otherPk|raw }}], ['confirm' => __('Deseja excluir realmente # {0}?', {{ otherPk|raw }})],['escape' => false, 'class' => 'btn btn-xs btn-danger', 'title' => __('Excluir')]) ?>
+                    <?= $this->Form->postLink(__('<span class="glyphicon glyphicon-trash"></span><span class="sr-only">' . __('Excluir') . '</span>'), ['controller' => '{{ details.controller }}', 'action' => 'delete', {{ otherPk|raw }}], ['escape' => false,'confirm' => __('Deseja excluir realmente # {0}?', {{ otherPk|raw }})],['escape' => false, 'class' => 'btn btn-xs btn-danger', 'title' => __('Excluir')]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
