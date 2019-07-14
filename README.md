@@ -36,6 +36,9 @@ Este plugin inclue o Twitter Bootstrap e também inclui o plugin [Bootstrap-UI](
 ## Com esta versão temos validação no login
 Agora temos validação pelo frontend usando recursos do HTML5, pattern e minlenght e também pelo UsersTable.php
     
+## Notices
+Com esta versão devemos ocultar os nitices disparados pelo bootstrap-UI.
+
 ## Criação de aplicativo usando o admin-br com bastante detalhes
 
 Abaixo um guia passo a passo e com boas informações para customizar aplicativos do CakePHP 3.
