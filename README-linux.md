@@ -28,7 +28,7 @@ bin/cake plugin load AdminBr --bootstrap
 ```
 ## Configurações
 
-Banco de dados – config/app.pgp, configure user, senha e banco:
+Banco de dados – config/app.php, configure user, senha e banco:
 ```php
             'username' => 'root',
             'password' => 'root',
