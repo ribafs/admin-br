@@ -26,6 +26,16 @@ composer require ribafs/admin-br
 ```php
 bin\cake plugin load AdminBr --bootstrap 
 ```
+## Pequena correção no PaginatorHelper
+Até a versão 1.25 havia um pequneo problema na paginação, ficando com uma quebra de linha.
+Acontece que o colega https://github.com/eduardoves me mandou as recomendações para corrigir e agora tá beleza
+
+Acesse a pasta onde instalou o Cake e edite o arquivo:
+vendor/friendsofcake/bootstrap-ui/src/View/Helper/PaginatorHelper.php
+Então comente as linhas seguintes:
+59, 69, 70 e 71
+Obrigado Eduardo. :)
+
 ## Configurações
 
 Banco de dados – config/app.pgp, configure user, senha e banco:
