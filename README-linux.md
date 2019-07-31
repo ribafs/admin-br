@@ -37,7 +37,7 @@ Banco de dados – config/app.php, configure user, senha e banco:
 Em 'Error' =>
 Troque - 'errorLevel' => E_ALL,
 por
-'errorLevel' => E_ALL & ~E_USER_DEPRECATED,
+'errorLevel' => E_ALL & ~E_USER_DEPRECATED & E_USER_NOTICE,
 ```
 
 Rotas – config/routes.php, comente esta linha abaixo:
