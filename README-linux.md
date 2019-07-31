@@ -16,10 +16,10 @@ Ajuste caso esteja instalando em outro diretório.
 ```php
 cd /var/www/html ou cd c:\xampp\htdocs
 composer create-project --prefer-dist cakephp/app clientes
-cd clientes
 ```
 ## Instalação do Plugin
 ```php
+cd clientes
 composer require ribafs/admin-br
 ```
 ## Habilitar o Plugin
