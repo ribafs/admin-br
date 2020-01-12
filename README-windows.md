@@ -15,7 +15,7 @@ Ajuste caso esteja instalando em outro diretório.
 
 ```php
 cd c:\xampp\htdocs
-composer create-project --prefer-dist cakephp/app clientes
+composer create-project --prefer-dist cakephp/app:3.* clientes
 cd clientes
 ```
 ## Instalação do Plugin
