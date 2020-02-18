@@ -14,7 +14,7 @@ Ajuste caso esteja instalando em outro diretório.
 ### Instalação do CakePHP 3
 
 ```php
-cd /var/www/html ou cd c:\xampp\htdocs
+cd /var/www/html
 composer create-project --prefer-dist cakephp/app:3.* clientes
 
 ## Instalação do Plugin
