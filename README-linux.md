@@ -11,7 +11,7 @@ Ajuste caso esteja instalando em outro diretório.
 
 ### Criar um banco de dados chamado cliente para testes iniciais
 
-### Instalação do CakePHP 3
+### Instalação do CakePHP 3 (O cake 4 ainda não é suportado)
 
 ```php
 cd /var/www/html ou cd c:\xampp\htdocs
@@ -20,7 +20,7 @@ composer create-project --prefer-dist cakephp/app clientes
 ## Instalação do Plugin
 ```php
 cd clientes
-composer require ribafs/admin-br
+composer require ribafs/admin-br:dev-master
 ```
 ## Habilitar o Plugin
 ```php
