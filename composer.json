@@ -1,0 +1,26 @@
+{
+    "name": "ribafs/admin-br",
+    "authors": [
+        {
+            "name": "Ribamar FS",
+            "email": "ribafs@gmail.com",
+            "homepage": "http://ribafs.org",
+            "role": "Developer"
+        }
+    ],
+    "description": "Plugin para implementar controle de acesso com bons recursos: busca, bcrypt, template do bake em português, bootstrap",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "admin", "acl","bootstrap", "plugin", "busca", "admin", "painel", "bcrypt", "portugues", "controle de acesso"],
+    "license": "MIT",
+    "require": {
+        "cakephp/cakephp": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AdminBr\\": "src"
+        }
+    },
+    "scripts": {
+      "post-autoload-dump": "php copiar.php"
+    }    
+}
