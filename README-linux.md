@@ -20,7 +20,7 @@ composer create-project --prefer-dist cakephp/app clientes
 ## Instalação do Plugin
 ```php
 cd clientes
-composer require ribafs/admin-br
+composer require ribafs/admin-br:dev-master
 ```
 ## Habilitar o Plugin
 ```php
