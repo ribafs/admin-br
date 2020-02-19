@@ -20,7 +20,7 @@ cd clientes
 ```
 ## Instalação do Plugin
 ```php
-composer require ribafs/admin-br:dev-master
+composer require ribafs/admin-br
 ```
 ## Habilitar o Plugin
 ```php
