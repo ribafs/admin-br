@@ -11,7 +11,7 @@ Ajuste caso esteja instalando em outro diretório.
 
 ### Criar um banco de dados chamado cliente para testes iniciais
 
-### Instalação do CakePHP 3
+### Instalação do CakePHP 3 (Atualmente sem suporte ao Cake 4)
 
 ```php
 cd c:\xampp\htdocs
