@@ -2,7 +2,7 @@
 /*
 Element para criar um menu que exibe somente links para controllers aos quais o usuário tem permissão de acesso.
 */
-	if($loguser == 'super'){
+	if($group == 1){
 	echo '<div align="center">';
 		foreach($supers as $controller){
             if($controller[0] != 'AdminBr'){
@@ -11,7 +11,7 @@ Element para criar um menu que exibe somente links para controllers aos quais o 
 		}
 		echo '&nbsp;&nbsp;<div class="btn btn-primary">&nbsp;'.$this->Html->link(__('Sair'), ['controller'=>'Users','action'=>'logout']).'</div>';
 	echo '</div>';		
-	}elseif($loguser == 'admin'){
+	}elseif($group == 2){
 	echo '<div align="center">';		
 		foreach($admins as $controller){
             if($controller[0] != 'AdminBr'){
@@ -20,7 +20,7 @@ Element para criar um menu que exibe somente links para controllers aos quais o 
 		}
 		echo '&nbsp;&nbsp;<div class="btn btn-primary">&nbsp;'.$this->Html->link(__('Sair'), ['controller'=>'Users','action'=>'logout']).'</div>';
 	echo '</div>';
-	}elseif($loguser == 'manager'){
+	}elseif($group == 3){
 	echo '<div align="center">';		
 		foreach($managers as $controller){
             if($controller[0] != 'AdminBr'){
@@ -29,7 +29,7 @@ Element para criar um menu que exibe somente links para controllers aos quais o 
 		}
 		echo '&nbsp;&nbsp;<div class="btn btn-primary">&nbsp;'.$this->Html->link(__('Sair'), ['controller'=>'Users','action'=>'logout']).'</div>';
 	echo '</div>';		
-	}elseif($loguser == 'user'){
+	}elseif($group == 4){
 	echo '<div align="center">';		
 		foreach($users as $controller){
             if($controller[0] != 'AdminBr'){
