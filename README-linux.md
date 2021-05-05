@@ -15,8 +15,10 @@ Ajuste caso esteja instalando em outro diretório.
 
 ```php
 cd /var/www/html ou cd c:\xampp\htdocs
-composer create-project --prefer-dist cakephp/app clientes
+composer create-project --prefer-dist cakephp/app:~3. clientes
 ```
+Edite o composer.json criado e remova a linha com postAutoloadDump      
+
 ## Instalação do Plugin
 ```php
 cd clientes
