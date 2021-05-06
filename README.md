@@ -8,7 +8,7 @@
 ## Este plugin continua o cake-acl-br
 
 ## Novidade desta versão
-Um ótimo gerenciador de arquivos, tinyFileManager.
+Um ótimo gerenciador de arquivos, tinyFileManager. Após a instalação se encontrarão em vendor/ribafs/admin-br/copiar
 Encontra-se na pasta copiar. São os dlois arquivos tf.php e translation.json. Os copie para o raiz do app. Acesse com
 
 http://localhost/acl/tf.php
