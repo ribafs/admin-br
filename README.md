@@ -1,11 +1,16 @@
-# Implementando ACL no CakePHP 3 com interface web
+# ACL no CakePHP 3 com interface web
 
 ### Testado
 - Com até a versão 3.7.9 do CakePHP
 - No Windows e no Linux
 - Com MySQL e com PostgreSQL
 
-### Este plugin continua o cake-acl-br
+## Este plugin continua o cake-acl-br
+
+## Novidade desta versão
+Um ótimo gerenciador de arquivos, tinyFileManager, que ficará no raiz do aplicativo e poderá ser acessado com:
+
+http://localhost/acl/tf.php
 
 ## Instale em ambiente de testes inicialmente
 Idealmente instale em um ambiente de testes para ter maior controle.
