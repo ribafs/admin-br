@@ -8,7 +8,8 @@
 ## Este plugin continua o cake-acl-br
 
 ## Novidade desta versão
-Um ótimo gerenciador de arquivos, tinyFileManager, que ficará no raiz do aplicativo e poderá ser acessado com:
+Um ótimo gerenciador de arquivos, tinyFileManager.
+Encontra-se na pasta copiar. São os dlois arquivos tf.php e translation.json. Os copie para o raiz do app. Acesse com
 
 http://localhost/acl/tf.php
 
