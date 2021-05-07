@@ -9,7 +9,17 @@
 
 ## Novidade desta versão
 Um ótimo gerenciador de arquivos, tinyFileManager. Após a instalação se encontrarão em vendor/ribafs/admin-br/copiar
-Encontra-se na pasta copiar. São os dlois arquivos tf.php e translation.json. Os copie para o raiz do app. Acesse com
+Encontra-se na pasta vendor/ribafs/admin-br/copiar. Mova tf.php e translation.json para a pasta webroot.
+Edite o tf.php e mude a linha 17 apra: define('CURRENT', '/');
+Então acesse com
+
+http://localhost/acl/tf.php
+
+Antes de colocar em produção crie um login e senha apra você e remova o user admin. Crie o hash da senha aqui:
+
+https://tinyfilemanager.github.io/docs/pwd.html
+
+Use uma senha forte, bem forte, pois o arquivo está fora do ACL.
 
 http://localhost/acl/tf.php
 
