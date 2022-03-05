@@ -1,5 +1,11 @@
 # ACL no CakePHP 3 com interface web
 
+## ALERTA
+
+O Github me alertou que esta versão do CakePHP tem uma vulnerabilidade e não consegui atualizar para a versão 4. Agora irei arquivar este projeto:
+
+"CakePHP before 4.0.6 mishandles CSRF token generation. This might be remotely exploitable in conjunction with XSS."
+
 ### Testado
 - Com até a versão 3.7.9 do CakePHP
 - No Windows e no Linux
